@@ -1,0 +1,197 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+    background-color: #272727;
+    --color: #ff5400;
+    --color-link-hover: #ffa700;
+    --color-very-light: #b7b7b7;
+    --color-light: #999;
+    --color-medium-light: #6d6d6d;
+    --color-medium: #3d3d3d;
+    --color-medium-dark: #323232;
+    --color-dark: #272727;
+    --color-very-dark: #1d1d1d;
+    --color-ultra-dark: #101010;
+    --hover-color: #ff5252;
+    --fire-gradient: linear-gradient(10deg, #ff8000, transparent) #ff4020;
+    --fire-gradient-hover: linear-gradient(190deg, #ff2020, #ff8000);
+}
+header {
+    width: 100%;
+    height: 85px;
+    background-color: var(--color-medium);
+}
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-size : 15px;
+}
+li {
+    list-style-type: none;
+}
+.container-header {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.logo-img {
+    display: flex;
+    width: 20%;
+    height: inherit;
+    align-items: center;
+    align-self: center;
+}
+.logo-img img {
+    width: 50%;
+}
+.menu-top {
+    width: 60%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    bottom: 1.2rem;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-top .topOne {
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu-top .topOne li a {
+    color: var(--color-light);
+    font-size : 15px;
+}
+.menu-top .bottomOne {
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 2rem;
+    align-items: center;
+}
+.cart-container {
+    position: relative;
+}
+.cart-container .cart-icon {
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    top: 0;
+}
+.icon-s {
+    flex: 0 0 25px;
+    height: 25px;
+    width: 25px;
+}
+.icon-cart {
+    mask-image: url(../img/icon-cart.svg);
+    --webkit-mask-image: url(../img/icon-cart);
+}
+.icon-xs {
+    flex: 0 0 28px;
+    height: 20px;
+    width: 2px;
+    margin: 5px;
+}
+.icon-pc {
+    background-color: #fff;
+    mask-image: url(../img/icon-pc.svg);
+    -webkit-mask-image: url(../img/icon-pc.svg);
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+}
+.icon-playstation, .icon-playstation-store {
+    mask-image: url(../img/icon-play.svg);
+    -webkit-mask-image: url(../img/icon-play.svg);
+    background-color: #fff;
+}
+.icon-playstation, .icon-playstation-4, .icon-playstation-store {
+    background-color: #fff;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+}
+.icon-ubisoft, .icon-ubisoft-connect, .icon-xbox {
+    background-color: #fff;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+}
+.icon-xbox {
+    mask-image: url(../img/icon-xbx.svg);
+    -webkit-mask-image: url(../img/icon-xbx.svg);
+}
+.icon-switch {
+    background-color: #fff;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+}
+.icon-switch {
+    mask-image: url(../img/icon-swt.svg);
+    -webkit-mask-image: url(../img/icon-swt.svg);
+    transform: scale(.8);
+}
+.navTab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 20%;
+}
+.icon-bank, .icon-cart {
+    background-color: #fff;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+}
+.cart-container .cart-icon .badge {
+    align-items: center;
+    background: var(--color);
+    border-radius: 100px;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+    height: 22px;
+    justify-content: center;
+    left: -5px;
+    min-width: 22px;
+    padding: 0 6px;
+    position: relative;
+    top: -8px;
+    z-index: 1;
+}
+.cart-checkout {
+    display: none;
+}
