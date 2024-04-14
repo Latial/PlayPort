@@ -1,0 +1,202 @@
+[
+    {
+      "item": "category1",
+      "name": "Action",
+      "background_image": "assets/img/actionBg.jpg",
+      "cover_image": "assets/img/action.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category4",
+      "name": "Adventure",
+      "background_image": "assets/img/adventure.jpg",
+      "cover_image": "assets/img/adventureChar.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category2",
+      "name": "Arcade",
+      "background_image": "assets/img/arcade.jpg",
+      "cover_image": "assets/img/arcadeChar.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category24",
+      "name": "Cooperation",
+      "background_image": "assets/img/coop.jpeg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon24.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category37",
+      "name": "Early Access",
+      "background_image": "assets/img/earlyaccess.png",
+      "cover_image": "",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category9",
+      "name": "FPS",
+      "background_image": "assets/img/fps.jpeg",
+      "cover_image": "assets/img/fpsChar.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category7",
+      "name": "Fighting",
+      "background_image": "assets/img/fighting.jpeg",
+      "cover_image": "assets/img/fightingChar.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category35",
+      "name": "Free to Play",
+      "background_image": "assets/img/f2p.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon35.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category32",
+      "name": "Indies",
+      "background_image": "assets/img/indie.jpeg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon32.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category54",
+      "name": "Local Co-op",
+      "background_image": "assets/img/localcoop.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon54.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category12",
+      "name": "MMO",
+      "background_image": "assets/img/mmo.jpg",
+      "cover_image": "assets/img/mmoChar.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category10",
+      "name": "Management",
+      "background_image": "assets/img/menagment.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon10.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category23",
+      "name": "Multiplayer",
+      "background_image": "assets/img/multiplayer.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon23.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category53",
+      "name": "Online Co-op",
+      "background_image": "assets/img/onlinecoop.jpg",
+      "cover_image": "assets/img/onlineCoOpCHar.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category51",
+      "name": "Online PVP",
+      "background_image": "assets/img/onlinepvp.jpg",
+      "cover_image": "assets/img/onlinePvPChar.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category13",
+      "name": "Platformer",
+      "background_image": "assets/img/platformer.jpg",
+      "cover_image": "assets/img/platformerChar.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category11",
+      "name": "RPG",
+      "background_image": "assets/img/rpg.jpg",
+      "cover_image": "assets/img/rpgChar.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category8",
+      "name": "Racing",
+      "background_image": "assets/img/racing.jpg",
+      "cover_image": "assets/img/racingChar.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category55",
+      "name": "Remote Play Together",
+      "background_image": "assets/img/playtogether.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon55.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category15",
+      "name": "Simulation",
+      "background_image": "assets/img/simulation.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon15.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category47",
+      "name": "Single-player",
+      "background_image": "assets/img/singlePlayetr.jpg",
+      "cover_image": "assets/img/singlePlayerChar.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category16",
+      "name": "Sports",
+      "background_image": "assets/img/sport.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon16.png",
+      "att": "",
+      "number": null
+    },
+    {
+      "item": "category17",
+      "name": "Strategy",
+      "background_image": "assets/img/strategy.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon17.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category31",
+      "name": "VR",
+      "background_image": "assets/img/vr.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon31.png",
+      "att": "best",
+      "number": null
+    },
+    {
+      "item": "category18",
+      "name": "Wargame",
+      "background_image": "assets/img/wargame.jpg",
+      "cover_image": "/themes/igv2/modules/categoryMenu/images/category-icon18.png",
+      "att": "",
+      "number": null
+    }
+  ]

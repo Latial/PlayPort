@@ -1,251 +1,187 @@
-$(function () {
-    var playerTrack = $("#player-track"),
-      bgArtwork = $("#bg-artwork"),
-      bgArtworkUrl,
-      albumName = $("#album-name"),
-      trackName = $("#track-name"),
-      albumArt = $("#album-art"),
-      sArea = $("#s-area"),
-      seekBar = $("#seek-bar"),
-      trackTime = $("#track-time"),
-      insTime = $("#ins-time"),
-      sHover = $("#s-hover"),
-      playPauseButton = $("#play-pause-button"),
-      i = playPauseButton.find("i"),
-      tProgress = $("#current-time"),
-      tTime = $("#track-length"),
-      seekT,
-      seekLoc,
-      seekBarPos,
-      cM,
-      ctMinutes,
-      ctSeconds,
-      curMinutes,
-      curSeconds,
-      durMinutes,
-      durSeconds,
-      playProgress,
-      bTime,
-      nTime = 0,
-      buffInterval = null,
-      tFlag = false,
-      albums = [
-        "Dawn",
-        "Me & You",
-        "Electro Boy",
-        "Home",
-        "Proxy (Original Mix)"
-      ],
-      trackNames = [
-        "Skylike - Dawn",
-        "Alex Skrindo - Me & You",
-        "Kaaze - Electro Boy",
-        "Jordan Schor - Home",
-        "Martin Garrix - Proxy"
-      ],
-      albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
-      trackUrl = [
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3",
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3",
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3",
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3"
-      ],
-      playPreviousTrackButton = $("#play-previous"),
-      playNextTrackButton = $("#play-next"),
-      currIndex = -1;
-  
-    function playPause() {
-      setTimeout(function () {
-        if (audio.paused) {
-          playerTrack.addClass("active");
-          albumArt.addClass("active");
-          checkBuffering();
-          i.attr("class", "fas fa-pause");
-          audio.play();
-        } else {
-          playerTrack.removeClass("active");
-          albumArt.removeClass("active");
-          clearInterval(buffInterval);
-          albumArt.removeClass("buffering");
-          i.attr("class", "fas fa-play");
-          audio.pause();
-        }
-      }, 300);
-    }
-  
-    function showHover(event) {
-      seekBarPos = sArea.offset();
-      seekT = event.clientX - seekBarPos.left;
-      seekLoc = audio.duration * (seekT / sArea.outerWidth());
-  
-      sHover.width(seekT);
-  
-      cM = seekLoc / 60;
-  
-      ctMinutes = Math.floor(cM);
-      ctSeconds = Math.floor(seekLoc - ctMinutes * 60);
-  
-      if (ctMinutes < 0 || ctSeconds < 0) return;
-  
-      if (ctMinutes < 0 || ctSeconds < 0) return;
-  
-      if (ctMinutes < 10) ctMinutes = "0" + ctMinutes;
-      if (ctSeconds < 10) ctSeconds = "0" + ctSeconds;
-  
-      if (isNaN(ctMinutes) || isNaN(ctSeconds)) insTime.text("--:--");
-      else insTime.text(ctMinutes + ":" + ctSeconds);
-  
-      insTime.css({ left: seekT, "margin-left": "-21px" }).fadeIn(0);
-    }
-  
-    function hideHover() {
-      sHover.width(0);
-      insTime.text("00:00").css({ left: "0px", "margin-left": "0px" }).fadeOut(0);
-    }
-  
-    function playFromClickedPos() {
-      audio.currentTime = seekLoc;
-      seekBar.width(seekT);
-      hideHover();
-    }
-  
-    function updateCurrTime() {
-      nTime = new Date();
-      nTime = nTime.getTime();
-  
-      if (!tFlag) {
-        tFlag = true;
-        trackTime.addClass("active");
+function fetchData(url, callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+              const data = JSON.parse(xhr.responseText);
+              callback(data);
+          } else {
+              console.error('Error fetching data:', xhr.statusText);
+          }
       }
-  
-      curMinutes = Math.floor(audio.currentTime / 60);
-      curSeconds = Math.floor(audio.currentTime - curMinutes * 60);
-  
-      durMinutes = Math.floor(audio.duration / 60);
-      durSeconds = Math.floor(audio.duration - durMinutes * 60);
-  
-      playProgress = (audio.currentTime / audio.duration) * 100;
-  
-      if (curMinutes < 10) curMinutes = "0" + curMinutes;
-      if (curSeconds < 10) curSeconds = "0" + curSeconds;
-  
-      if (durMinutes < 10) durMinutes = "0" + durMinutes;
-      if (durSeconds < 10) durSeconds = "0" + durSeconds;
-  
-      if (isNaN(curMinutes) || isNaN(curSeconds)) tProgress.text("00:00");
-      else tProgress.text(curMinutes + ":" + curSeconds);
-  
-      if (isNaN(durMinutes) || isNaN(durSeconds)) tTime.text("00:00");
-      else tTime.text(durMinutes + ":" + durSeconds);
-  
-      if (
-        isNaN(curMinutes) ||
-        isNaN(curSeconds) ||
-        isNaN(durMinutes) ||
-        isNaN(durSeconds)
-      )
-        trackTime.removeClass("active");
-      else trackTime.addClass("active");
-  
-      seekBar.width(playProgress + "%");
-  
-      if (playProgress == 100) {
-        i.attr("class", "fa fa-play");
-        seekBar.width(0);
-        tProgress.text("00:00");
-        albumArt.removeClass("buffering").removeClass("active");
-        clearInterval(buffInterval);
-      }
-    }
-  
-    function checkBuffering() {
-      clearInterval(buffInterval);
-      buffInterval = setInterval(function () {
-        if (nTime == 0 || bTime - nTime > 1000) albumArt.addClass("buffering");
-        else albumArt.removeClass("buffering");
-  
-        bTime = new Date();
-        bTime = bTime.getTime();
-      }, 100);
-    }
-  
-    function selectTrack(flag) {
-      if (flag == 0 || flag == 1) ++currIndex;
-      else --currIndex;
-  
-      if (currIndex > -1 && currIndex < albumArtworks.length) {
-        if (flag == 0) i.attr("class", "fa fa-play");
-        else {
-          albumArt.removeClass("buffering");
-          i.attr("class", "fa fa-pause");
-        }
-  
-        seekBar.width(0);
-        trackTime.removeClass("active");
-        tProgress.text("00:00");
-        tTime.text("00:00");
-  
-        currAlbum = albums[currIndex];
-        currTrackName = trackNames[currIndex];
-        currArtwork = albumArtworks[currIndex];
-  
-        audio.src = trackUrl[currIndex];
-  
-        nTime = 0;
-        bTime = new Date();
-        bTime = bTime.getTime();
-  
-        if (flag != 0) {
-          audio.play();
-          playerTrack.addClass("active");
-          albumArt.addClass("active");
-  
-          clearInterval(buffInterval);
-          checkBuffering();
-        }
-  
-        albumName.text(currAlbum);
-        trackName.text(currTrackName);
-        albumArt.find("img.active").removeClass("active");
-        $("#" + currArtwork).addClass("active");
-  
-        bgArtworkUrl = $("#" + currArtwork).attr("src");
-  
-        bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
-      } else {
-        if (flag == 0 || flag == 1) --currIndex;
-        else ++currIndex;
-      }
-    }
-  
-    function initPlayer() {
-      audio = new Audio();
-  
-      selectTrack(0);
-  
-      audio.loop = false;
-  
-      playPauseButton.on("click", playPause);
-  
-      sArea.mousemove(function (event) {
-        showHover(event);
-      });
-  
-      sArea.mouseout(hideHover);
-  
-      sArea.on("click", playFromClickedPos);
-  
-      $(audio).on("timeupdate", updateCurrTime);
-  
-      playPreviousTrackButton.on("click", function () {
-        selectTrack(-1);
-      });
-      playNextTrackButton.on("click", function () {
-        selectTrack(1);
-      });
-    }
-  
-    initPlayer();
+  };
+  xhr.open('GET', url, true);
+  xhr.send();
+}
+fetchData('assets/data/categories.json',showAllCategories)
+fetchData('assets/data/games.json', function(gameData) {
+  // Fetch type data
+  fetchData('assets/data/type.json', function(typeData) {
+      // Call showGames with both data sets
+      showGames(gameData, typeData);
   });
-  
+});
+function showGames(gameData, typeData) {
+  typeData.forEach(type => {
+      let filteredGames;
+      if (type.name === "trending") {
+          filteredGames = gameData.filter(game => game.type === type.id);
+          displayCorrectGames(filteredGames, ".trending");
+      } 
+      else if (type.name === "preorders") {
+          filteredGames = gameData.filter(game => game.type === type.id);
+          displayCorrectGames(filteredGames, ".preorders");
+      }
+      else if (type.name === "bestSellers") {
+          filteredGames = gameData.filter(game => game.type === type.id);
+          displayCorrectGames(filteredGames, ".bestSellers");
+      }
+      
+  });
+  function displayCorrectGames(gamesData, div) {
+      console.log(gamesData)
+      const gameCards = gamesData.map(game => `
+      <div class="item banner-similar">
+         <a class="cover video" href="assets/pages/prducts.html">
+            <picture>
+               <img class="picture" data-src="${game.img.src}" alt="${game.img.alt}" src="${game.img.src}" loading="lazy" onload="lazyLoadImage(this)">
+            </picture>
+            <div class="discount">${game.discount}</div>
+         </a>
+         <div class="information">
+            <div class="text">
+               <div class="name">
+                  <span class="title">${game.name}</span>
+               </div>
+            </div>
+            <div class="price">${game.price}<span>RSD</span></div>
+         </div>
+      </div>
+  `);
+  $(div).html(gameCards);
+  }
+}
+function showAllCategories(data) {
+    const categorieCard = data.map(caterogie => `
+        <a href="" class="item ${caterogie.item} ${caterogie.att}" style="background-image: url('${caterogie.background_image}');">
+        <div class="content">
+        <div class="name">${caterogie.name}</div>
+        <div class="cover" style="background-image: url('${caterogie.cover_image}');"></div>
+        </div>
+        </a>
+    `);
+    console.log(categorieCard)
+    $('.higher').html(categorieCard);
+
+    const links = document.querySelectorAll('.categories-container a:not(.best)');
+    const button = document.getElementById('showAllCategories');
+
+    button.addEventListener('click', function() {
+        links.forEach(link => {
+            if (link.style.display === 'block') {
+                link.style.display = 'none';
+            } 
+            else 
+            {
+                link.style.display = 'block';
+            }
+        });
+    });
+}
+function fetchData(url,dataGet) {
+    $.ajax({
+        url : url,
+        type : "GET",
+        dataType : "json",
+        success : function(data) {
+            dataGet(data);
+        },
+        error : function(xhr, status, err) {
+            alert(status, err);
+        }
+    })
+}
+$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+    var searchInput = document.getElementById("header-search-input");
+    searchInput.placeholder = "";
+});
+
+function lazyLoadImage(item) {
+    const image = new Image();
+    const src = item.getAttribute('data-src');
+
+    if (null === src) {
+        return;
+    }
+
+    item.onload = null;
+    image.src = src;
+
+    image.onload = function () {
+        item.setAttribute('src', src);
+    };
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Function to toggle display property
+    function toggleDisplay(elementId) {
+        var element = document.getElementById(elementId);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+
+    // Add click event listeners to nav pc, nav playstation, and nav xbox
+    document.getElementById("nav-pc").addEventListener("click", function() {
+        toggleDisplay("nav-pc-panel");
+    });
+
+    document.getElementById("nav-playstation").addEventListener("click", function() {
+        toggleDisplay("nav-playstation-panel");
+    });
+
+    document.getElementById("nav-xbox").addEventListener("click", function() {
+        toggleDisplay("nav-xbox-panel");
+    });
+    document.getElementById("nav-nintendo").addEventListener("click", function() {
+        toggleDisplay("nav-nintendo-panel");
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Function to handle scroll event
+    function handleScroll() {
+        if (window.scrollY > 0) {
+            document.body.classList.add("scrolled");
+        } else {
+            document.body.classList.remove("scrolled");
+        }
+    }
+
+    // Add scroll event listener to the window
+    window.addEventListener("scroll", handleScroll);
+});
+document.addEventListener("DOMContentLoaded", function() {
+    var searchForm = document.getElementById("search-site");
+    var closeSearchButton = document.querySelector(".close-search");
+    var searchInput = document.getElementById("header-search-input");
+    var body = document.body;
+
+    searchForm.addEventListener("click", function() {
+        body.classList.add("search-open");
+        searchInput.placeholder = "Baldur's Gate, HellDivers 2, Factorio.....";
+    });
+
+    closeSearchButton.addEventListener("click", function(event) {
+        event.stopPropagation(); // Prevent the click event from bubbling up to the search form
+        body.classList.remove("search-open");
+        searchInput.placeholder = "";
+    });
+});
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+$('.badge').text(cartItems.length);

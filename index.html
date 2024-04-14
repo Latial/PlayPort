@@ -3,136 +3,626 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-    <meta name="description" content="Welcome to our ultimate gaming emporium! Dive into a world of virtual adventures with our vast selection of video games on pc, console and more. Whether you're a seasoned gamer or just starting out, find everything you need to level up your gaming experience. Shop now for unbeatable deals and unleash your inner champion">
-    <meta name="keywords" content="game,shop,pc,play,discount">
+    <script src="assets/js/lazyLoad.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>PlayPort</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
 </head>
 <body>
-    <header>
-        <div class="container-header">
-            <div class="logo-img">
-                <img src="assets/img/logo.png" alt="img" srcset="">
+   <header class="header-container">
+   <a href="/en/" title="Home" class="logo"></a>
+   <div class="menu">
+      <div class="trendings">
+         <a class="links" href="">Trending</a>
+         <a class="links preorder" href="">Pre-orders</a>
+         <a class="links upcoming" href="">Upcoming</a>
+         <a class="links support" href="assets/pages/contact.html">Support 24/7</a>
+         <a class="links support" href="assets/pages/author.html">About Author</a>
+         </div>
+      <div class="product-menu" id = "fixedHeader">
+         <div class="overcolor"></div>
+         <div class="links" id = "fixedHeader">
+            <div class="nav pc" id="nav-pc">
+               <a class="access mimic"  id = "drpodownCustom">
+                  <div class="icon-pc icon-xs"></div>
+                  <span class="title">PC</span>
+                     <i class="fa-solid fa-caret-down"></i>
+               </a>
+               <div class="nav-panel" id="nav-pc-panel">
+                  <div class="content">
+                     <div class="overcolor"></div>
+                     <span class="menu-title">
+                        <a href="/">
+                           <span>Platforms</span>
+                           <div class="icon-arrow icon-xxs"></div>
+                        </a>
+                     </span>
+                     <div class="container platforms">
+                        <a href="assets/pages/prducts.html" id="product-menu-platform-steam">
+                           <div class="platform platform-steam">
+                              <div class="icon-steam icon-s"></div>
+                           </div>
+                           Steam
+                        </a>
+                        <a href="assets/pages/prducts.html" id="product-menu-platform-ubisoft-connect">
+                           <div class="platform platform-ubisoft-connect">
+                              <div class="icon-ubisoft-connect icon-s"></div>
+                           </div>
+                           Ubisoft Connect
+                        </a>
+                        <a href="assets/pages/prducts.html" id="product-menu-platform-ea-app">
+                           <div class="platform platform-ea-app">
+                              <div class="icon-ea-app icon-s"></div>
+                           </div>
+                           EA App
+                        </a>
+                        <a href="assets/pages/prducts.html" id="product-menu-platform-battle-net">
+                           <div class="platform platform-battle-net">
+                              <div class="icon-battle-net icon-s"></div>
+                           </div>
+                           Battle.net
+                        </a>
+                        <a href="assets/pages/prducts.html" id="product-menu-platform-rockstar">
+                           <div class="platform platform-rockstar">
+                              <div class="icon-rockstar icon-s"></div>
+                           </div>
+                           Rockstar
+                        </a>
+                        <a href="assets/pages/prducts.html" id="product-menu-platform-gog-com">
+                           <div class="platform platform-gog-com">
+                              <div class="icon-gog-com icon-s"></div>
+                           </div>
+                           GOG.com
+                        </a>
+                        <a href="assets/pages/prducts.html" id="product-menu-platform-microsoft-store">
+                           <div class="platform platform-microsoft-store">
+                              <div class="icon-microsoft-store icon-s"></div>
+                           </div>
+                           Microsoft Store
+                        </a>
+                        <a href="assets/pages/prducts.html">
+                           <div class="platform platform-epic-games">
+                              <div class="icon-epic-games icon-s"></div>
+                           </div>
+                           Epic
+                        </a>
+                     </div>
+                     <span class="menu-title">
+                        <a href="">
+                           <span>Giftcards</span>
+                           <div class="icon-arrow icon-xxs"></div>
+                        </a>
+                     </span>
+                     <div class="container prepaid">
+                        <a class="pc" href="">
+                           <div class="icone pc-steam-gift"></div>
+                           <span>Steam Gift Cards</span>
+                        </a>
+                        <a class="pc" href="">
+                           <div class="icone pc-ig-gift"></div>
+                           <span>IG Gift Cards</span>
+                        </a>
+                        <a class="pc" href="">
+                           <div class="icone pc-blizzard-gift"></div>
+                           <span>Blizzard Gift Cards</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="menu-top">
-                <ul class = "topOne">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Games</a></li>
-                    <li><a href="">Author</a></li>
-                </ul>
-                <ul class = "bottomOne">
-                    <div class="navTab">
-                        <div class="icon-pc icon-xs"></div>
-                        <li><a href="">PC</a></li>
-                    </div>
-                    <div class="navTab">
-                        <div class="icon-playstation icon-xs"></div>
-                        <li><a href="">PS</a></li>
-                    </div>
-                    <div class="navTab">
-                        <div class="icon-xbox icon-xs"></div>
-                        <li><a href="">XBOX</a></li>
-                    </div>
-                    <div class="navTab">
-                        <div class="icon-switch icon-xs"></div>
-                        <li><a href="">Nintendo</a></li>
-                    </div>
-                </ul>
+            <div class="nav playstation" id="nav-playstation">
+               <a class="access mimic">
+                  <div class="icon-playstation icon-xs"></div>
+                  <span class="title">Playstation</span>
+                  <i class="fa-solid fa-caret-down"></i>
+               </a>
+               <div class="nav-panel" id="nav-playstation-panel">
+                  <div class="content">
+                     <div class="overcolor"></div>
+                     <span class="menu-title">
+                        <a href="assets/pages/prducts.html">
+                           <span>Consoles</span>
+                           <div class="icon-arrow icon-xxs"></div>
+                        </a>
+                     </span>
+                     <div class="container platforms">
+                        <a href="assets/pages/prducts.html">
+                           <div class="platform platform-playstation-4">
+                              <div class="icon-playstation-4 icon-s"></div>
+                           </div>
+                           Playstation 4
+                        </a>
+                        <a href="assets/pages/prducts.html">
+                           <div class="platform platform-playstation-5">
+                              <div class="icon-playstation-5 icon-s"></div>
+                           </div>
+                           Playstation 5
+                        </a>
+                     </div>
+                     <span class="menu-title">
+                        <a href="assets/pages/prducts.html">
+                           <span>Giftcards</span>
+                           <div class="icon-arrow icon-xxs"></div>
+                        </a>
+                     </span>
+                     <div class="container prepaid">
+                        <a href="assets/pages/prducts.html">
+                           <div class="icone ps-store"></div>
+                           <span>Playstation Store</span>
+                        </a>
+                        <a href="assets/pages/prducts.html">
+                           <div class="icone ps-plus"></div>
+                           <span>Playstation Plus</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div id="cart-app" class="cart-container">
-                <a class="cart-icon" href="/assets/pages/cart">
-                   <div class="icon-cart icon-s"></div>
-                   <span class="badge">0</span>
-                </a>
-                <div class="cart-checkout">
-                   <div class="cart-content">
-                      <div class="not-empty">
-                         <div class="icon-close icon-xs mimic"></div>
-                         <div class="header">
-                            <div class="header-info">
-                               <h2>Cart</h2>
-                               <span class="header-bag">
-                               (1
-                               <span>item)</span></span>
-                            </div>
-                         </div>
-                         <div class="items-list"></div>
-                         <div class="items-list recommended">
-                            <!---->
-                         </div>
-                         <div class="bottom-panel">
-                            <div class="sub-total">
-                               <div class="cart-total"><span class="text">Total cart:</span> <span class="price">NaN<span>RSD</span></span></div>
-                               <div class="actions">
-                                  <a href="" class="button button-secondary"><span class="cart-text">Go to cart (1)</span></a> 
-                                  <a href="" class="button">
-                                     <span class="cart-text">Pay</span> 
-                                     <div class="icon-arrow icon-xxs"></div>
-                                  </a>
-                               </div>
-                               <a href="#" class="cart-continue">
-                                  <div class="icon-arrow icon-xxs"></div>
-                                  <span>Continue shopping</span>
-                               </a>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                   <div class="cart-shadow"></div>
-                </div>
-             </div>
-        </div>
-    </header>
-    <div id="app-cover">
-      <div id="bg-artwork"></div>
-      <div id="bg-layer"></div>
-      <div id="player">
-        <div id="player-track">
-          <div id="album-name"></div>
-          <div id="track-name"></div>
-          <div id="track-time">
-            <div id="current-time"></div>
-            <div id="track-length"></div>
-          </div>
-          <div id="s-area">
-            <div id="ins-time"></div>
-            <div id="s-hover"></div>
-            <div id="seek-bar"></div>
-          </div>
-        </div>
-        <div id="player-content">
-          <div id="album-art">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
-            <div id="buffer-box">Buffering ...</div>
-          </div>
-          <div id="player-controls">
-            <div class="control">
-              <div class="button" id="play-previous">
-                <i class="fas fa-backward"></i>
-              </div>
+            <div class="nav xbox" id="nav-xbox">
+               <a class="access mimic">
+                  <div class="icon-xbox icon-xs"></div>
+                  <span class="title">Xbox</span>
+                     <i class="fa-solid fa-caret-down"></i>
+               </a>
+               <div class="nav-panel" id="nav-xbox-panel">
+                  <div class="content">
+                     <div class="overcolor"></div>
+                     <span class="menu-title">
+                        <a href="assets/pages/prducts.html">
+                           <span>Consoles</span>
+                           <div class="icon-arrow icon-xxs"></div>
+                        </a>
+                     </span>
+                     <div class="container platforms">
+                        <a href="assets/pages/prducts.html">
+                           <div class="platform platform-xbox-one">
+                              <div class="icon-xbox-one icon-s"></div>
+                           </div>
+                           Xbox ONE
+                        </a>
+                        <a href="assets/pages/prducts.html">
+                           <div class="platform platform-xbox-series">
+                              <div class="icon-xbox-series icon-s"></div>
+                           </div>
+                           Xbox Series X|S
+                        </a>
+                     </div>
+                     <span class="menu-title">
+                        <a href="assets/pages/prducts.html">
+                           <span>Giftcards</span>
+                           <div class="icon-arrow icon-xxs"></div>
+                        </a>
+                     </span>
+                     <div class="container prepaid">
+                        <a href="assets/pages/prducts.html">
+                           <div class="icone xbox-game"></div>
+                           <span>Xbox Game Pass</span>
+                        </a>
+                        <a href="">
+                           <div class="icone xbox-gift"></div>
+                           <span>Xbox Gift Card</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="control">
-              <div class="button" id="play-pause-button">
-                <i class="fas fa-play"></i>
-              </div>
+            <div class="nav nintendo" id="nav-nintendo">
+               <a class="access mimic">
+                  <div class="icon-switch icon-xs"></div>
+                  <span class="title">Nintendo</span>
+                     <i class="fa-solid fa-caret-down"></i>
+               </a>
+               <div class="nav-panel" id="nav-nintendo-panel">
+                  <div class="content">
+                     <div class="overcolor"></div>
+                     <span class="menu-title">
+                     <span>Consoles</span>
+                     </span>
+                     <div class="container platforms">
+                        <a href="assets/pages/prducts.html">
+                           <div class="platform platform-switch">
+                              <div class="icon-switch icon-s"></div>
+                           </div>
+                           Nintendo Switch
+                        </a>
+                     </div>
+                     <span class="menu-title">
+                        <a href="assets/pages/prducts.html">
+                           <span>Giftcards</span>
+                           <div class="icon-arrow icon-xxs"></div>
+                        </a>
+                     </span>
+                     <div class="container prepaid">
+                        <a href="assets/pages/prducts.html">
+                           <div class="icone nintendo-eshop"></div>
+                           <span>Nintendo eShop Cards</span>
+                        </a>
+                        <a href="assets/pages/prducts.html">
+                           <div class="icone nintendo-online"></div>
+                           <span>Nintendo Memberships</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="control">
-              <div class="button" id="play-next">
-                <i class="fas fa-forward"></i>
-              </div>
+         </div>
+         <form id="search-site" class="search-site" action="" method="get" role="search" itemprop="potentialAction" itemscope="" itemtype="https://schema.org/SearchAction">
+            <div class="search" id="search">
+            <input class="search-input" id="header-search-input" name="q" autocomplete="off" spellcheck="false" autocapitalize="off" itemprop="query-input" placeholder="Baldurs's Gate 3, HellDivers 2", RPG, multiplayer..."><div class="icon-backspace icon-s"></div><div class="close-search">+</div><div class="icon-search-input"></div>
             </div>
-          </div>
-        </div>
+         </form>
       </div>
-    </div>
+   </div>
+   <div class="header-right">
+      <div id="cart-app" class="cart-container">
+         <a href="assets/pages/cart.html" class="cart-icon">
+            <div class="icon-cart icon-s"></div>
+            <span class="badge"></span>
+         </a>
+         <div class="cart-checkout">
+            <div class="cart-content">
+               <div class="not-empty">
+                  <div class="icon-close icon-xs mimic"></div>
+                  <div class="header">
+                     <div class="header-info">
+                        <h2>Cart</h2>
+                        <span class="header-bag">
+                        (1
+                        <span>item)</span></span>
+                     </div>
+                  </div>
+                  <div class="items-list"></div>
+                  <div class="items-list recommended">
+                     <!---->
+                  </div>
+                  <div class="bottom-panel">
+                     <div class="sub-total">
+                        <div class="cart-total"><span class="text">Total cart:</span> <span class="price">NaN<span>RSD</span></span></div>
+                        <div class="actions">
+                           <a href="" class="button button-secondary"><span class="cart-text">Go to cart (1)</span></a> 
+                           <a href="" class="button">
+                              <span class="cart-text">Pay</span> 
+                              <div class="icon-arrow icon-xxs"></div>
+                           </a>
+                        </div>
+                        <a href="#" class="cart-continue">
+                           <div class="icon-arrow icon-xxs"></div>
+                           <span>Continue shopping</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="cart-shadow"></div>
+         </div>
+      </div>
+      <script>
+         window.langs.signInError = "It seems you have an extension that prevents Google+ Javascript from running. If you want to use Google+ connect, please disable this extension (Adblock, ABP...).";
+         window.langs.uagUpdateAppleSignIn = "Please upgrade the app to use Apple sign in.";
+         window.ROLLBAR_ACCESS_TOKEN = "47a6f42602954ee0ad2eb18b488f9f29";
+      </script>
+   </div>
+</header>
+    <main class = "main-content">
+        <div class="home-container">
+         <div class="banner-main">
+
+         </div>
+             <div class="products-trending">
+               <div class="headline visual-compensation">
+                  <a href="" title="Trending - View all" class="title-more">
+                     <h2>Trending</h2>
+                     <div class="icon-arrow icon-xs"></div>
+                  </a>
+               </div>
+               <div class="item-list listing-slider trending">
+
+                  <a href="/en/search/" class="listing-dummy" title="Trending - View all"></a>
+               </div>
+            </div>
+            <div class="separator wide"></div>
+            <div class="aboutUsContainer">
+               <div class="container">
+                  <div class="bestPrices fast">
+                     <div class="iconClass">
+                        <i class="fa-solid fa-money-bill-wave fa-2xl"></i>
+                     </div>
+                     <div class="text">
+                        <div class="maintext">Best Prices</div>
+                        <div class="subtext">With discounts</div>
+                        </div>
+                  </div>
+                  <div class="spacer fast"></div>
+                  <div class="bestPrices safe">
+                     <div class="iconClass">
+                        <i class="fa-solid fa-money-bill-wave fa-2xl"></i>
+                     </div>
+                     <div class="text">
+                        <div class="maintext">Gaming &amp; Passion</div>
+                        <div class="subtext">Family</div>
+                     </div>
+                  </div>
+                  <div class="spacer safe"></div>
+                  <div class="bestPrices support">
+                     <div class="iconClass">
+                        <i class="fa-solid fa-money-bill-wave fa-2xl"></i>
+                     </div>
+                     <div class="text">
+                        <div class="maintext">Customer support</div>
+                        <div class="subtext">Suport 24/7</div>
+                     </div>
+                  </div>
+                  <div class="spacer support"></div>
+                  <div class="star-raiting desktop" data-locale="en-US" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="512bc117000064000522ed10" data-theme="dark" data-font-family="Barlow" style="position: relative;">
+                     <h2>Star Rating</h2>
+                     <span class="fa fa-star checked fa-xl"></span>
+                     <span class="fa fa-star checked fa-xl"></span>
+                     <span class="fa fa-star checked fa-xl"></span>
+                     <span class="fa fa-star checked fa-xl"></span>
+                     <span class="fa-regular fa-star-half-stroke checked fa-xl"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="separator wide"></div>
+            <div id="preorders">
+               <div class="preorders-container">
+                  <div class="headline visual-compensation">
+                     <a href="" title="Pre-orders" class="title-more">
+                        <h2>Pre-orders</h2>
+                        <div class="icon-arrow icon-xs"></div>
+                     </a>
+                  </div>
+                  <div class="item-list listing-slider preorders">
+                     
+                     <a href="" class="listing-dummy" title="Pre-orders - View all"></a>
+                  </div>
+               </div>
+            </div>
+        </div>
+        <div class="separator wide"></div>
+        <div class="bestsellers-container">
+         <div class="games">
+            <div class="headline visual-compensation">
+               <a href="" title="Bestsellers - View all" class="title-more">
+                  <h2>Bestsellers</h2>
+                  <div class="icon-arrow icon-xs"></div>
+               </a>
+            </div>
+            <div class="item-list listing-slider bestSellers">
+               <a href="" title="Bestsellers - View all" class="listing-dummy"></a>
+            </div>
+         </div>
+      </div>
+      <div class="separator wide"></div>
+        <div class="aboutUs">
+         <div class="aboutUsContainer">
+            <div class="container d-flex justify-content-center">
+               <div class="maintext">
+                  <div class="text d-flex justify-content-center flex-column text-center">
+                     <div class="maintext myStyle">About Us</div>
+                     <div class="subtext subStyle">Welcome to PlayPort – your gaming destination! We offer a curated selection of the latest releases and beloved classics, fostering a vibrant gaming community. Join us and embark on unparalleled gaming adventures!</div>
+                     </div>
+               </div>
+            </div>
+         </div>
+        </div>
+        <div class="separator wide"></div>
+        <div class="categories-container">
+         <div class="headline visual-compensation">
+            <h2>Categories</h2>
+            <a class="button button-secondary show-more-categories best" id = "showAllCategories">View all</a>
+         </div>
+         <div class="item-list higher listing-categories listing-slider">
+         <a href="" class="item category1 best" style="background-image: url('assets/img/actionBg.jpg');">
+               <div class="content">
+                  <div class="name">Action</div>
+                  <div class="cover" style="background-image: url('assets/img/action.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category4 best" style="background-image: url('assets/img/adventure.jpg');">
+               <div class="content">
+                  <div class="name">Adventure</div>
+                  <div class="cover" style="background-image: url('assets/img/adventureChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category2 best" style="background-image: url('assets/img/arcade.jpg');">
+               <div class="content">
+                  <div class="name">Arcade</div>
+                  <div class="cover" style="background-image: url('assets/img/arcadeChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category24 " style="background-image: url('assets/img/coop.jpeg');">
+               <div class="content">
+                  <div class="name">Cooperation</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon24.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category37 " style="background-image: url('assets/img/earlyaccess.png');">
+               <div class="content">
+                  <div class="name">Early Access</div>
+                  <div class="cover" style="background-image: url('assets/img/');"></div>
+               </div>
+            </a>
+            <a href="" class="item category9 best" style="background-image: url('assets/img/fps.jpeg');">
+               <div class="content">
+                  <div class="name">FPS</div>
+                  <div class="cover" style="background-image: url('assets/img/fpsChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category7 best" style="background-image: url('assets/img/fighting.jpeg');">
+               <div class="content">
+                  <div class="name">Fighting</div>
+                  <div class="cover" style="background-image: url('assets/img/fightingChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category35 " style="background-image: url('assets/img/f2p.jpg');">
+               <div class="content">
+                  <div class="name">Free to Play</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon35.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category32 " style="background-image: url('assets/img/indie.jpeg');">
+               <div class="content">
+                  <div class="name">Indies</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon32.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category54 " style="background-image: url('assets/img/localcoop.jpg');">
+               <div class="content">
+                  <div class="name">Local Co-op</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon54.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category12 " style="background-image: url('assets/img/mmo.jpg');">
+               <div class="content">
+                  <div class="name">MMO</div>
+                  <div class="cover" style="background-image: url('assets/img/mmoChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category10 " style="background-image: url('assets/img/menagment.jpg');">
+               <div class="content">
+                  <div class="name">Management</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon10.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category23 " style="background-image: url('assets/img/multiplayer.jpg');">
+               <div class="content">
+                  <div class="name">Multiplayer</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon23.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category53 " style="background-image: url('assets/img/onlinecoop.jpg');">
+               <div class="content">
+                  <div class="name">Online Co-op</div>
+                  <div class="cover" style="background-image: url('assets/img/onlineCoOpCHar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category51 " style="background-image: url('assets/img/onlinepvp.jpg');">
+               <div class="content">
+                  <div class="name">Online PVP</div>
+                  <div class="cover" style="background-image: url('assets/img/onlinePvPChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category13 " style="background-image: url('assets/img/platformer.jpg');">
+               <div class="content">
+                  <div class="name">Platformer</div>
+                  <div class="cover" style="background-image: url('assets/img/platformerChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category11 best" style="background-image: url('assets/img/rpg.jpg');">
+               <div class="content">
+                  <div class="name">RPG</div>
+                  <div class="cover" style="background-image: url('assets/img/rpgChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category8 " style="background-image: url('assets/img/racing.jpg');">
+               <div class="content">
+                  <div class="name">Racing</div>
+                  <div class="cover" style="background-image: url('assets/img/racingChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category55 " style="background-image: url('assets/img/playtogether.jpg');">
+               <div class="content">
+                  <div class="name">Remote Play Together</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon55.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category15 " style="background-image: url('assets/img/simulation.jpg');">
+               <div class="content">
+                  <div class="name">Simulation</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon15.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category47 best" style="background-image: url('assets/img/singlePlayetr.jpg');">
+               <div class="content">
+                  <div class="name">Single-player</div>
+                  <div class="cover" style="background-image: url('assets/img/singlePlayerChar.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category16 " style="background-image: url('assets/img/sport.jpg');">
+               <div class="content">
+                  <div class="name">Sports</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon16.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category17 best" style="background-image: url('assets/img/strategy.jpg');">
+               <div class="content">
+                  <div class="name">Strategy</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon17.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category31 best" style="background-image: url('assets/img/vr.jpg');">
+               <div class="content">
+                  <div class="name">VR</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon31.png');"></div>
+               </div>
+            </a>
+            <a href="" class="item category18 " style="background-image: url('assets/img/wargame.jpg');">
+               <div class="content">
+                  <div class="name">Wargame</div>
+                  <div class="cover" style="background-image: url('/themes/igv2/modules/categoryMenu/images/category-icon18.png');"></div>
+               </div>
+            </a>
+         </div>
+      </div>
+    </main>
+    <div class="separator wide"></div>
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="footer-col">
+                  <h4>About Us</h4>
+                  <ul>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Our Services</a></li>
+                      <li><a href="#">Terms of Use</a></li>
+                      <li><a href="#">Join Our Team</a></li>
+                      <li><a href="assets/pages/author.html">About Author</a></li>
+                      <li><a href="ODSEK VISOKA ŠKOLA ZA INFORMACIONE I KOMUNIKACIONE TEHNOLOGI_documentacija.pdf">Documentation</a></li>
+
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Additional Information</h4>
+                  <ul>
+                      <li><a href="#">FAQs</a></li>
+                      <li><a href="#">Bookings</a></li>
+                      <li><a href="#">Refunds</a></li>
+                      <li><a href="#">Payment Methods</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Services</h4>
+                  <ul>
+                      <li><a href="#">Gaming Experiences</a></li>
+                      <li><a href="#">Promotions</a></li>
+                      <li><a href="#">Seasonal Events</a></li>
+                      <li><a class="links support" href="assets/pages/contact.html">Support 24/7</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Follow Us on Social Media</h4>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+     <!--<div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>-->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
+<!-- Footer section with social media icons and newsletter sign-up -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assets/js/home.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/headerScroll.js"></script>
 </body>
 </html>

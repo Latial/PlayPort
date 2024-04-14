@@ -1,0 +1,385 @@
+[
+    {
+        "id" : 1,
+        "genre" : 1,
+        "name": "Helldivers 2",
+        "discount": "-25%",
+        "price": "3513.04",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/9575/380x218/helldivers-2-pc-game-steam-europe-cover.jpg?v=1708264800",
+            "alt": "Helldivers 2"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type" : 1,
+        "system" : ["PC"],
+        "stores" : ["2ysk-Playstation Store", "sg2g-Steam"]
+    },
+    {
+        "id": 2,
+        "genre": 1,
+        "name": "Skull and Bones",
+        "discount": "-21%",
+        "price": "5529.70",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/3434/380x218/skull-and-bones-pc-game-ubisoft-connect-europe-cover.jpg?v=1708264800",
+            "alt": "Skull and Bones"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type": 1,
+        "stores": ["55il-GOG.com", "zt22-Ncsoft"],
+        "systems": ["PC", "Xbox One"]
+    },
+    {
+        "id": 3,
+        "genre": 1,
+        "name": "Ready or Not",
+        "discount": "-45%",
+        "price": "3247.04 ",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/2075/380x218/ready-or-not-pc-game-steam-cover.jpg?v=1708264800",
+            "alt": "Ready or Not"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type": 1,
+        "stores": ["bfxh-Epic Games", "zt22-Ncsoft", "sg2g-Steam"],
+        "systems": ["Linux", "Playstation 5"]
+    },
+    {
+        "id": 4,
+        "genre": 1,
+        "name": "Tomb Raider I-III Remastered Starring Lara Croft",
+        "discount": "-29%",
+        "price": "2424.44",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15109/380x218/tomb-raider-i-iii-remastered-starring-lara-croft-pc-game-steam-europe-cover.jpg?v=1708264800",
+            "alt": "Tomb Raider I-III Remastered Starring Lara Croft"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type": 1,
+        "stores": ["2ysk-Playstation Store", "sg2g-Steam"],
+        "systems": ["Xbox One", "PC"]
+    },
+    {
+        "id": 5,
+        "genre": 1,
+        "name": "Tekken 8",
+        "discount": "-31%",
+        "price": "5623.44",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/9579/380x218/tekken-8-pc-game-steam-cover.jpg?v=1708264800",
+            "alt": "Tekken 8"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type": 1,
+        "stores": ["2ysk-Playstation Store", "sg2g-Steam"],
+        "systems": ["Playstation 5", "Mac"]
+    },
+    {
+        "id": 6,
+        "genre": 1,
+        "name": "Banishers: Ghosts of New Eden",
+        "discount": "-20%",
+        "price": "4627.42",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/13295/380x218/banishers-ghosts-of-new-eden-pc-game-steam-cover.jpg?v=1708264800",
+            "alt": "Banishers: Ghosts of New Eden"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type": 1,
+        "stores": ["2ysk-Playstation Store", "sg2g-Steam"],
+        "systems": ["Xbox One", "Xbox Series X|S"]
+    },
+    {
+        "id": 7,
+        "genre": 1,
+        "name": "The Sims 4 For Rent",
+        "discount": "-42%",
+        "price": "2718.56",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15236/380x218/the-sims-4-for-rent-pc-mac-game-ea-app-cover.jpg?v=1708264800",
+            "alt": "The Sims 4 For Rent"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type": 1,
+        "stores": ["n4vr-EA App", "sg2g-Steam"],
+        "systems": ["PC", "Xbox Series X|S"]
+    },
+    {
+        "id": 8,
+        "genre": 1,
+        "name": "Cyberpunk 2077: Ultimate Edition",
+        "discount": "-60%",
+        "price": "4183.31",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/14769/380x218/cyberpunk-2077-ultimate-edition-ultimate-edition-pc-game-gog-com-cover.jpg?v=1708264800",
+            "alt": "Cyberpunk 2077: Ultimate Edition"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type": 1,
+        "stores": ["bfxh-Epic Games", "55il-GOG.com"],
+        "systems": ["Mac", "Switch"]
+    },
+    {
+        "id": 9,
+        "genre": 1,
+        "name": "Assetto Corsa Competizione GT2 Pack",
+        "discount": "-27%",
+        "price": "1510.44",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15737/380x218/assetto-corsa-competizione-gt2-pack-pc-game-steam-cover.jpg?v=1708264800",
+            "alt": "Assetto Corsa Competizione GT2 Pack"
+        },
+        "description": "",
+        "release_date": "",
+        "developer": "",
+        "type": 1,
+        "stores": ["sg2g-Steam"],
+        "systems": ["Xbox Series X|S", "GeForce Now"]
+    },
+    {
+        "id": 10,
+        "genre": 1,
+        "name": "Pacific Drive",
+        "discount": "-42%",
+        "price": "2049.47",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/12903/380x218/pacific-drive-pc-game-steam-europe-cover.jpg?v=1708264800",
+            "alt": "Pacific Drive"
+        },
+        "description": "",
+        "release_date": "In 4 days",
+        "developer": "",
+        "type": 2,
+        "stores": ["sg2g-Steam"],
+        "systems": ["Xbox Series X|S", "Linux"]
+    },
+    {
+        "id": 11,
+        "genre": 1,
+        "name": "Horizon Forbidden West Complete Edition",
+        "discount": "-26%",
+        "price": "5201.60",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15086/380x218/horizon-forbidden-west-complete-edition-complete-edition-pc-game-steam-europe-cover.jpg?v=1708264800",
+            "alt": "Horizon Forbidden West Complete Edition"
+        },
+        "description": "",
+        "release_date": "21 March 2024",
+        "developer": "",
+        "type": 2,
+        "stores": ["sg2g-Steam"],
+        "systems": ["PC", "Playstation 5"]
+    },
+    {
+        "id": 12,
+        "genre": 1,
+        "name": "Dragon's Dogma 2 Deluxe Edition",
+        "discount": "-29%",
+        "price": "6267.93",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15452/380x218/dragon-s-dogma-2-deluxe-edition-deluxe-edition-pc-game-steam-europe-cover.jpg?v=1708264800",
+            "alt": "Dragon's Dogma 2 Deluxe Edition"
+        },
+        "description": "",
+        "release_date": "22 March 2024",
+        "developer": "",
+        "type": 2,
+        "stores": ["sg2g-Steam"],
+        "systems": ["PC", "Mac"]
+    },
+    {
+        "id": 13,
+        "genre": 1,
+        "name": "South Park: Snow Day! Digital Deluxe Edition",
+        "discount": "-32%",
+        "price": "3981.76",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15635/380x218/south-park-snow-day-digital-deluxe-edition-digital-deluxe-edition-pc-game-steam-cover.jpg?v=1708264800",
+            "alt": "South Park: Snow Day! Digital Deluxe Edition"
+        },
+        "description": "",
+        "release_date": "26 March 2024",
+        "developer": "",
+        "type": 2,
+        "stores": ["sg2g-Steam"],
+        "systems": ["Mac", "Xbox One"]
+    },
+    {
+        "id": 14,
+        "genre": 1,
+        "name": "Expeditions: A MudRunner Game - Supreme Edition + Early Access",
+        "discount": "-21%",
+        "price": "6443.70",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15688/380x218/expeditions-a-mudrunner-game-supreme-edition-early-access-supreme-edition-pc-game-steam-cover.jpg?v=1708264800",
+            "alt": "Expeditions: A MudRunner Game - Supreme Edition + Early Access"
+        },
+        "description": "",
+        "release_date": "In 16 days",
+        "developer": "",
+        "stores": ["sg2g-Steam"],
+        "systems": ["Linux", "Switch"]
+    },
+    {
+        "id": 15,
+        "genre": 1,
+        "name": "Destiny 2: The Final Shape + Annual Pass",
+        "discount": "-27%",
+        "price": "8611.52",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/14822/380x218/destiny-2-the-final-shape-annual-pass-dlc-season-pc-game-steam-cover.jpg?v=1708264800",
+            "alt": "Destiny 2: The Final Shape + Annual Pass"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "type": 2,
+        "stores": ["sg2g-Steam"],
+        "systems": ["Xbox Series X|S", "PC"]
+    },
+    {
+        "id": 16,
+        "type": 3,
+        "name": "Helldivers 2 Super Citizen Edition",
+        "discount": "-26%",
+        "price": "5213.31",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15238/380x218/helldivers-2-super-citizen-edition-super-citizen-edition-pc-game-steam-europe-cover.jpg?v=1708268400",
+            "alt": "Helldivers 2 Super Citizen Edition"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "stores": ["sg2g-Steam"],
+        "systems": ["Playstation 5", "Xbox Series X|S"]
+    },
+    {
+        "id": 17,
+        "type": 3,
+        "name": "Assetto Corsa Ultimate Edition",
+        "discount": "-88%",
+        "price": "573.01",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/3098/380x218/assetto-corsa-ultimate-edition-ultimate-edition-pc-game-steam-cover.jpg?v=1708268400",
+            "alt": "Assetto Corsa Ultimate Edition"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "stores": ["sg2g-Steam"],
+        "systems": ["Xbox Series X|S", "Playstation 5"]
+    },
+    {
+        "id": 18,
+        "type": 3,
+        "name": "Tekken 8",
+        "discount": "-31%",
+        "price": "5623.44",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/9579/380x218/tekken-8-pc-game-steam-cover.jpg?v=1708268400",
+            "alt": "Tekken 8"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "stores": ["sg2g-Steam"],
+        "systems": ["Xbox One", "GeForce Now"]
+    },
+    {
+        "id": 19,
+        "type": 3,
+        "name": "Grand Theft Auto V: Premium Online Edition",
+        "discount": "-64%",
+        "price": "1229.21",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/4211/380x218/grand-theft-auto-v-premium-online-edition-premium-online-edition-pc-game-rockstar-cover.jpg?v=1708268400",
+            "alt": "Grand Theft Auto V: Premium Online Edition"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "stores": ["c87x", "bfxh", "0twv"],
+        "systems": ["Xbox Series X|S", "Mac"]
+    },
+    {
+        "id": 20,
+        "type": 3,
+        "name": "Guild Wars 2: 2000 Gems",
+        "discount": "-21%",
+        "price": "2318.98",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/141/380x218/guild-wars-2-2000-gems-pc-game-ncsoft-cover.jpg?v=1708268400",
+            "alt": "Guild Wars 2: 2000 Gems"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "stores": ["zt22", "vaq9", "2ysk"],
+        "systems": ["Playstation 5", "Linux"]
+    },
+    {
+        "id": 21,
+        "type": 3,
+        "name": "Minecraft: Java & Bedrock Edition",
+        "discount": "-36%",
+        "price": "2241.64",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/442/380x218/minecraft-java-and-bedrock-edition-pc-game-cover.jpg?v=1708268400",
+            "alt": "Minecraft: Java & Bedrock Edition"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "stores": ["55il", "sz4b", "vaq9"],
+        "systems": ["Playstation 5", "Xbox One"]
+    },
+    {
+        "id": 22,
+        "type": 3,
+        "name": "Mortal Kombat 11",
+        "discount": "-96%",
+        "price": "234.36",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/3339/380x218/mortal-kombat-11-pc-game-steam-cover.jpg?v=1708268400",
+            "alt": "Mortal Kombat 11"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "stores": ["sg2g", "55il", "bfxh"],
+        "systems": ["PC", "Switch"]
+    },
+    {
+        "id": 23,
+        "type": 3,
+        "name": "The Sims 4 For Rent",
+        "discount": "-42%",
+        "price": "2718.56",
+        "img": {
+            "src": "https://gaming-cdn.com/images/products/15236/380x218/the-sims-4-for-rent-pc-mac-game-ea-app-cover.jpg?v=1708268400",
+            "alt": "The Sims 4 For Rent"
+        },
+        "description": "",
+        "release_date": "4 June 2024",
+        "developer": "",
+        "stores": ["n4vr", "2ysk", "c87x"],
+        "systems": ["Switch", "Playstation 4"]
+    }
+
+]
